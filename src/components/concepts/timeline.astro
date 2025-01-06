@@ -1,0 +1,145 @@
+<section class="timeline-section">
+  <h2>Experiencia</h2>
+  <div class="timeline-container">
+    <!-- Elemento de la linea de tiempo dcha-->
+    <div class="timeline">
+      <div class="timeline-component timeline-date">Octubre 2024</div>
+      <div class="timeline-middle">
+        <div class="timeline-circle"></div>
+      </div>
+      <div class="timeline-component timeline-content">
+        <h3>Formación reglada</h3>
+        <p>Certificado de profesionalidad</p>
+      </div>
+    </div>
+    <!-- Elemento de la linea de tiempo izda-->
+    <div class="timeline">
+      <div class="timeline-component timeline-date order-3">Junio 2024</div>
+      <div class="timeline-middle order-2">
+        <div class="timeline-circle"></div>
+      </div>
+      <div class="timeline-component timeline-content order-1">
+        <h3>Formación B2B</h3>
+        <p>Formador en cursos a Empresas: Angular, JS, Git y GitHub ...</p>
+      </div>
+    </div>
+    <!-- Elemento de la linea de tiempo dcha-->
+    <div class="timeline">
+      <div class="timeline-component timeline-date">2022</div>
+      <div class="timeline-middle">
+        <div class="timeline-circle"></div>
+      </div>
+      <div class="timeline-component timeline-content">
+        <h3>Bootcamp</h3>
+        <p>Formador en el Bootcamp ...</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  section.timeline-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-double);
+    /* align-items: center;
+     justify-content: center;
+    min-height: 100vh; 
+    padding: 100px 0;*/
+    padding-block: var(--space-double);
+    border: 1px solid var(--color-primary-dark);
+  }
+
+  /* .design {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  } */
+
+  .timeline-container {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem 2rem;
+    /* margin: 1rem;*/
+    margin-bottom: 2rem;
+    /* border-radius: 6px; */
+  }
+
+  .timeline-date {
+    padding: 0rem 2rem;
+    align-self: start;
+  }
+
+  .timeline-component {
+    margin: 0 1rem 1rem 1rem;
+    background: #1f1f1f;
+    /* -webkit-box-shadow:
+      5px 5px 10px #1a1a1a,
+      -5px -5px 10px #242424; */
+    box-shadow:
+      5px 5px 10px #1a1a1a,
+      -5px -5px 10px #242424;
+    border-radius: 5px;
+    color: white;
+    /* padding: 1.75rem; */
+    transition: 0.4s ease;
+    overflow-wrap: break-word;
+  }
+
+  .timeline-content {
+    padding: 1rem 2rem;
+    /* margin-bottom: 2rem; */
+  }
+
+  @media screen and (width > 500px) {
+    .timeline-container {
+      margin-block: 0;
+    }
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 1fr;
+    }
+
+    .timeline-middle {
+      position: relative;
+      background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
+      width: 3px;
+      height: 100%;
+
+      .main-middle {
+        opacity: 0;
+      }
+      .timeline-circle {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        background-image: linear-gradient(45deg, #f27121, #e94057, #8a2387);
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+      }
+    }
+
+    .timeline-date {
+      text-align: right;
+    }
+
+    .order-1 {
+      order: 1;
+    }
+    .order-2 {
+      order: 2;
+    }
+    .order-3 {
+      order: 3;
+      text-align: left;
+    }
+  }
+</style>

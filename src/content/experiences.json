@@ -1,0 +1,118 @@
+[
+  {
+    "name": "Formación reglada",
+    "startDate": "Octubre 2024",
+    "endDate": "Abril 2025",
+    "summary": "Formador del Certificado de Profesionalidad IFCD0210 - Programación con tecnologías web",
+    "company": "CAS Training",
+    "position": "Formador",
+    "urls": [""]
+  },
+  {
+    "name": "Formación B2B",
+    "startDate": "Enero 2024",
+    "endDate": "Octubre 2024",
+    "summary": "Formador en cursos a empresas de Angular, JS, Git y GitHub...",
+    "company": "Autónomo",
+    "position": "Formador",
+    "urls": [""]
+  },
+  {
+    "name": "Bootcamp",
+    "startDate": "Octubre 2021",
+    "endDate": "Mayo 2024",
+    "summary": "Formador en el Bootcamp de Desarrollo Web Full Stack",
+    "company": "ISDI Coders",
+    "position": "Formador",
+    "urls": [""]
+  },
+  {
+    "name": "Desarrollador Angular",
+    "startDate": "Diciembre 2019 ",
+    "endDate": "Septiembre 2021",
+    "summary": "Analista / Programador Senior en Angular y Aplicaciones Web ",
+    "company": "Evosoft",
+    "position": "Formador",
+    "urls": [""]
+  },
+  {
+    "name": "Formación B2B",
+    "startDate": "",
+    "endDate": "Diciembre 2019",
+    "summary": "Formador en cursos a empresas de Angular 7AngularJS y otras tecnologías de desarrollo Web",
+    "company": "Autónomo",
+    "position": "Formador",
+    "urls": [""]
+  },
+  {
+    "name": "Desarrollador Fullstack",
+    "startDate": "Enero de 2016 ",
+    "endDate": "Marzo 2017",
+    "summary": "Analista / Programador Senior en Angular y Aplicaciones Web en PHP",
+    "company": "Aldallana",
+    "position": "Formador",
+    "urls": [""]
+  },
+  {
+    "name": "Formación reglada",
+    "startDate": "Julio de 2013",
+    "endDate": "Enero 2016",
+    "summary": "C.P. Desarrollo de Aplicaciones con Tecnologías Web (IFCD0210) y C.P. Confección y Publicación de páginas Web (IFCD0110)",
+    "company": "CIFE, CFTIC, Tajamar, Femxa, SanRoman...",
+    "position": "Formador",
+    "urls": [""]
+  },
+  {
+    "name": "Programador y Formador en ABAP",
+    "startDate": "Diciembre de 2011",
+    "endDate": "Julio 2013",
+    "summary": "",
+    "company": "Microforum",
+    "position": "Formador",
+    "urls": [""],
+    "projects": [
+      {
+        "name": "Programación ABAP (942h)",
+        "summary": "Julio de 2012 - Julio de 2017",
+        "company": "Microforum, ViewNext (Sinensia)"
+      },
+      {
+        "name": "C.P. Administración de servicios de internet - IFCT0509 (500h)",
+        "summary": "Octubre de 2013 – Enero de 2014",
+        "company": "Microforum"
+      },
+      {
+        "name": "Desarrollador / Formador ABAP (7 meses)",
+        "summary": "junio de 2012 (7 meses)",
+        "company": "FUNDACION INFORED"
+      }
+    ]
+  },
+  {
+    "name": "Owner",
+    "startDate": "",
+    "endDate": "Diciembre 2011",
+    "summary": "Negocios",
+    "company": "",
+    "position": "Owner",
+    "urls": [""]
+  },
+  {
+    "name": "Administrador / desarrollador Web ",
+    "startDate": "",
+    "endDate": "Diciembre 2006",
+    "summary": "Responsable del desarrollo y administración de la Web y de otros servicios de Internet.",
+    "company": "Unidad de Cartografía Cerebral (UCM) - CentroPET",
+    "position": "",
+    "urls": [""]
+  },
+  {
+    "name": "",
+    "startDate": "",
+    "endDate": "Enero 1997",
+    "summary": "",
+    "company": "",
+    "position": "",
+    "urls": [""]
+  }
+]

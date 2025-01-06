@@ -1,0 +1,321 @@
+[
+  {
+    "id": 1,
+    "name": "Programación web en el entorno cliente",
+    "startDate": "2024-11-05",
+    "endDate": "2025-04",
+    "duration": {
+      "days": 36,
+      "hours": 180
+    },
+    "summary": "Módulo 1 (MF0491_3) del certificado profesional de Desarrollo de Aplicaciones Web. En este módulo se estudian los lenguajes de programación web en el entorno cliente, HTML, CSS y JavaScript así como las tecnologías y herramientas necesarias para el desarrollo de aplicaciones web.",
+    "company": "Cas Training / CFD San Blas",
+    "image": "../assets/projects/certificado-web-front.png",
+    "urls": ["https://github.com/alce65/IFCD0210_2024"],
+    "technologies": [
+      "HTML",
+      "SVG",
+      "CSS",
+      "markdown",
+      "JavaScript",
+      "JSON",
+      "Figma",
+      "UX/UI",
+      "Astro",
+      "VSC",
+      "Vite",
+      "Git",
+      "GitHub"
+    ],
+    "highlights": [
+      "1. Elaboración de documentos web mediante lenguajes de marcas",
+      "2. Desarrollo y reutilización de componentes software y multimedia mediante lenguajes de guión",
+      "3. Aplicación de técnicas de usabilidad y accesibilidad en el entorno cliente"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "JavaScript",
+    "startDate": "2024-11-25",
+    "endDate": "2024-11-26",
+    "duration": {
+      "days": 2,
+      "hours": 16
+    },
+    "summary": "Curso de JavaScript: las bases del lenguaje y su uso en el entorno cliente. Core de JS. Nociones de programación orientada a objetos y programación funcional. JS en la Web: DOM y eventos. Formularios. Programación asíncrona.",
+    "company": "Icono TC (BBVA)",
+    "image": "../assets/projects/curso-js-icono.png",
+    "urls": ["https://github.com/alce65/JavaScript-Nov-Icono"],
+    "technologies": ["JavaScript", "Node.js", "VSC"],
+    "highlights": ["16h", "factura 2024 - 000007"]
+  },
+  {
+    "id": 3,
+    "name": "JavaScript",
+    "startDate": "2024-10-14",
+    "endDate": "2024-10-23",
+    "duration": {
+      "days": 5,
+      "hours": 25
+    },
+    "summary": "Curso de JavaScript: las bases del lenguaje. Introducción a core del lenguaje. Módulos. Gestión de errores. Programación orientada a objetos. Programación funcional. Programación asíncrona.",
+    "company": "Cle Formación (Diputación de Castellón)",
+    "image": "../assets/projects/curso-js-cle.png",
+    "urls": ["https://github.com/alce65/Cle.DiCas"],
+    "technologies": ["JavaScript", "Node.js", "VSC"],
+    "highlights": []
+  },
+  {
+    "id": 4,
+    "name": "Introducción a Git",
+    "startDate": "2024-10-07",
+    "endDate": "2024-10-10",
+    "duration": {
+      "days": 4,
+      "hours": 16
+    },
+    "summary": "Git, Conceptos básicos.  Fundamentos y arquitectura interna de GIT. Commits. Cambios en el histórico. Branching. Trabajando con repositorios remotos. Pull Requests. Flows",
+    "company": "Icono TC (Grupo SIA)",
+    "image": "../assets/projects/git-icono.png",
+    "urls": ["https://github.com/alce65/intro-git-icono"],
+    "technologies": ["Git", "GitHub"],
+    "highlights": []
+  },
+  {
+    "id": 5,
+    "name": "Git",
+    "startDate": "2024-10-01",
+    "endDate": "2024-10-04",
+    "duration": {
+      "days": 4,
+      "hours": 20
+    },
+    "summary": "Git. Introducción. Quick start. Aprendiendo a referenciar revisiones y paths. Git internals. Herramientas para preparar un buen commit en cualquier situación. Reescribiendo la historia. Trabajando en paralelo. Configuración de git. hooks. Integración con otras herramientas y entornos:     Utilidades. Buenas prácticas",
+    "company": "CAS Training (Indra)",
+    "image": "../assets/projects/git-cas.png",
+    "urls": ["https://github.com/alce65/git.indra.course/tree/main"],
+    "technologies": ["Git", "GitHub"],
+    "highlights": []
+  },
+  {
+    "id": 6,
+    "name": "Angular 18",
+    "startDate": "2024-09-16",
+    "endDate": "2024-09-25",
+    "duration": {
+      "days": 8,
+      "hours": 32
+    },
+    "summary": "Angular 18 . Introducción a Angular. TypeScript. Requisitos, herramientas y configuración. Componentes. Uso de servicios. Rutas y navegación. Conocer la arquitectura de Angular. Integrar servicios y bibliotecas. Gestionar el ciclo de vida de la app. Probar y evaluar la calidad del código de la app",
+    "company": "IT Formación (Grupo Loyal / Indra)",
+    "image": "../assets/projects/ng18-indra.png",
+    "urls": ["https://github.com/alce65/ng18.indra"],
+    "technologies": [
+      "JavaScript",
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "Jasmine",
+      "Karma",
+      "VSC"
+    ],
+    "highlights": []
+  },
+  {
+    "id": 7,
+    "name": "Automatización y testing",
+    "startDate": "2024-09-02",
+    "endDate": "2024-09-25",
+    "duration": {
+      "days": 8,
+      "hours": 16
+    },
+    "summary": "Módulo del Máster en Desarrollo de Apps y Programación Web. En este módulo se estudian las técnicas de automatización de tareas (CI/CD) con GitHub Actions y el testing de aplicaciones web. En el backend se utilizan Jest y Supertest para testar aplicaciones creadas con Node.js y Express. En el frontend son Jest, Testing Library y Cypress las utilizadas para aplicaciones creadas con React.",
+    "company": "Immune",
+    "image": "../assets/projects/testing-immune.png",
+    "urls": [
+      "https://github.com/alce65/testing_basic",
+      "https://github.com/alce65/inmune-react-app",
+      "https://github.com/alce65/inmune-cd-cd"
+    ],
+    "technologies": [
+      "JavaScript",
+      "GitHub Actions",
+      "Jest",
+      "Cypress",
+      "CI/CD",
+      "Node.js",
+      "Express",
+      "React",
+      "VSC"
+    ],
+    "highlights": []
+  },
+  {
+    "id": 8,
+    "name": "Angular 18",
+    "startDate": "2024-06-10",
+    "endDate": "2024-06-20",
+    "duration": {
+      "days": 8,
+      "hours": 40
+    },
+    "summary": "Desarrollo avanzado de aplicaciones web con Angular 18. Introducción. Creación de proyectos monorepo. Componentes. Comunicación entre componentes: arquitectura básica. Design Systems. Directivas. Pipes. Servicios. Formularios. HTTpClient. Gestión de estados. Signals. Testing.",
+    "company": "CAS Training (INAEM)",
+    "image": "../assets/projects/ng18-cas.png",
+    "urls": ["https://github.com/alce65/ng.18.cas"],
+    "technologies": [
+      "JavaScript",
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "Jasmine",
+      "Karma",
+      "VSC"
+    ],
+    "highlights": []
+  },
+  {
+    "id": 9,
+    "name": "X Bootcamp de Desarrollo Web FUll Stack",
+    "startDate": "2024-02-12",
+    "endDate": "2024-05-17",
+    "duration": {
+      "days": 65,
+      "hours": 520
+    },
+    "summary": "Desarrollo front-end y back-end en tan solo unas pocas semanas. Aprenderás a desarrollar aplicaciones web con las tecnologías más demandadas en el mercado laboral. Conocerás las bases de la programación, la arquitectura cliente-servidor, el desarrollo de aplicaciones web y la gestión de bases de datos. Además, aprenderás a trabajar en equipo y a gestionar proyectos de desarrollo de software.",
+    "company": "ISDI Coders",
+    "image": "https://placehold.co/600x400/999/111",
+    "urls": ["https://github.com/alce65/week9.final-24-1"],
+    "technologies": [
+      "HTML",
+      "SVG",
+      "CSS",
+      "markdown",
+      "JavaScript",
+      "TypeScript",
+      "JSON",
+      "Figma",
+      "UX/UI",
+      "Angular",
+      "RxJS",
+      "Jasmine",
+      "Karma",
+      "Node.js",
+      "Express",
+      "NestJS",
+      "Prisma",
+      "Postgres",
+      "JWToken",
+      "Cloudinary",
+      "Jest",
+      "Cypress",
+      "VSC",
+      "Vite",
+      "Git",
+      "GitHub",
+      "CI/CD",
+      "GitHub Actions"
+    ],
+    "highlights": ["", ""]
+  },
+  {
+    "id": 10,
+    "name": "Angular 17 e introducción a Node.js y Express",
+    "startDate": "2024-01-29",
+    "endDate": "2024-02-09",
+    "duration": {
+      "days": 9,
+      "hours": 27
+    },
+    "summary": "Angular. Inicio del proyecto, ESLint. Componentes. Rutas Lazy. Binding y Estados. Arquitectura básica. Servicios. Patrón repository. Formularios Template driven. Observables. HTTPClient. Autenticación. Flux: gestión de estados centralizados. Introducción al Backend. Node. Express",
+    "company": "ISDI (DigiTech)",
+    "image": "https://placehold.co/600x400/999/111",
+    "urls": [
+      "https://github.com/alce65/demo-dt-angular",
+      "https://github.com/alce65/demo-node-dt"
+    ],
+    "technologies": [
+      "JavaScript",
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "Jasmine",
+      "Karma",
+      "Node.js",
+      "Express",
+      "VSC"
+    ],
+    "highlights": ["", ""]
+  },
+  {
+    "id": 11,
+    "name": "Taller de MySQL / Taller de Auth con JWT",
+    "startDate": "2024-01-29",
+    "endDate": "2024-02-01",
+    "duration": {
+      "days": 2,
+      "hours": 10
+    },
+    "summary": "Talleres complementarios para alumnos de los Bootcapms. [1] Introducción a Bases de datos (D8). DB Relacionales (SQL) v. NoSQL. Entidades y relaciones. Normalización. MySQL. Uso desde Node: driver nativo. [2] Auth en el servidor Node/Express con JWT. Auth en el cliente React con JWT.",
+    "company": "ISDI Coders",
+    "image": "https://placehold.co/600x400/999/111",
+    "urls": [
+      "https://github.com/alce65/sql",
+      "https://github.com/alce65/Auth-Taller"
+    ],
+    "technologies": [
+      "JavaScript",
+      "TypeScript",
+      "Node.js",
+      "MySQL",
+      "Express",
+      "JWToken",
+      "Jest",
+      "VSC",
+      "Vite"
+    ],
+    "highlights": ["", ""]
+  },
+  {
+    "id": 12,
+    "name": "Angular 17",
+    "startDate": "2024-01-17",
+    "endDate": "2024-01-18",
+    "duration": {
+      "days": 2,
+      "hours": 16
+    },
+    "summary": "Taller de Angular 17 para alumnos que han estudiado React en el Bootcamp de Desarrollo de Aplicaciones Web de ISDI Coders. En este taller se estudian los conceptos básicos de Angular y se desarrolla una aplicación de gestión de tareas. Inicio del proyecto, ESLint. Componentes. Rutas Lazy. Binding y Estados. Librerías. Pipes. Testing. Arquitectura básica. Servicios. Patrón repository. Observables. HTTPClient. Flux: gestión de estados centralizados. Interceptores. Formularios reactivos. Signals",
+    "company": "ISDI Coders",
+    "image": "https://placehold.co/600x400/999/111",
+    "urls": ["https://github.com/alce65/ng17.taller-in-situ"],
+    "technologies": [
+      "JavaScript",
+      "Angular",
+      "TypeScript",
+      "RxJS",
+      "Jasmine",
+      "Karma",
+      "VSC"
+    ],
+    "highlights": ["", ""]
+  },
+  {
+    "id": 0,
+    "name": "",
+    "startDate": "2024-xx",
+    "endDate": "2024-xx",
+    "duration": {
+      "days": 0,
+      "hours": 0
+    },
+    "summary": "",
+    "company": "",
+    "image": "https://placehold.co/600x400/999/111",
+    "urls": [],
+    "technologies": [],
+    "highlights": ["", ""]
+  }
+]

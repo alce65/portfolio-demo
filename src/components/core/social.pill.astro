@@ -1,0 +1,26 @@
+<a href={Astro.props.href}>
+  <slot />
+</a>
+
+<style>
+  a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-half);
+    background-color: var(--color-primary-dark-05);
+    color: var(--color-primary);
+    padding: var(--space-half) var(--space);
+    text-decoration: none;
+    border-radius: 0.5rem;
+    transition:
+      background-color 0.3s,
+      color 0.3s,
+      transform 0.3s;
+
+    &:hover {
+      background-color: var(--color-primary);
+      color: var(--color-bg-primary);
+      transform: scale(1.1);
+    }
+  }
+</style>

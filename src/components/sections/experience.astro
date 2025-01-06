@@ -1,0 +1,43 @@
+---
+import TimelineItem from "./exp.timeline.item.astro";
+import Section from "../core/section.astro";
+import type { Work } from "../../types/data";
+import EXPERIENCES from "../../content/experiences.json";
+
+const experiences: Work[] = EXPERIENCES.map((experience) => ({
+  ...experience,
+  startDate: new Date(experience.startDate),
+  endDate: new Date(experience.endDate),
+}));
+---
+
+<Section id="experience" title="Experiencia">
+  <div class="timeline">
+    {
+      experiences.map((experience, index) => (
+        <TimelineItem
+          {...experience}
+          isLast={index === experiences.length - 1}
+        />
+      ))
+    }
+  </div>
+</Section>
+
+<style>
+  .timeline {
+    width: 80%;
+    height: auto;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  @media screen and (width > 500px) {
+    .timeline {
+      display: grid;
+      grid-template-columns: 1fr 3px 3fr;
+    }
+  }
+</style>

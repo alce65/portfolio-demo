@@ -1,22 +1,209 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+// Supports weights 100-900
+import "@fontsource-variable/onest";
+import Header from "../components/core/header.astro";
+import Footer from "../components/core/footer.astro";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const metadata = {
+  language: "es",
+  author: "Alejandro Cerezo",
+  description: "Portfolio demo",
+  title: "Portfolio demo",
+};
+---
+
+<!doctype html>
+<html lang={metadata.language}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={metadata.description} />
+    <meta name="author" content={metadata.author} />
+    <title>{metadata.title}</title>
+  </head>
+  <body id="top">
+    <Header />
+    <main>
+      <slot />
+    </main>
+    <Footer />
+  </body>
+
+  <style is:global>
+    :root {
+      /* typography */
+      --font-family: "Onest Variable", Verdana, Geneva, Tahoma, sans-serif;
+      --base-size: 1rem;
+      --scale: 1.25;
+      --h1: calc(var(--h2) * var(--scale)); /* 3.052rem */
+      --h2: calc(var(--h3) * var(--scale)); /* 2.441rem */
+      --h3: calc(var(--h4) * var(--scale)); /* 1.953rem */
+      --h4: calc(var(--h5) * var(--scale)); /* 1.563rem */
+      --h5: calc(var(--h6) * var(--scale)); /* 1.25rem */
+      --h6: var(--base-size); /* 1rem */
+      --small: calc(var(--base-size) / var(--scale)); /* 0.8rem */
+      --x-small: calc(var(--small) / var(--scale)); /* 0.64rem */
+
+      --line-height-x: 1.25;
+      --line-height: 1.5;
+      --line-height-l: 1.75;
+
+      /* colors */
+      --color-primary: #f0f0f0;
+      --color-primary-05: #f0f0f050;
+      --color-primary-dark: #bbbbbb;
+      --color-primary-dark-05: #bbbbbb50;
+      --color-secondary: #303030;
+      --color-bg-primary: #000;
+      --color-bg-primary-05: #00000050;
+      --color-bg-primary-light: #202020;
+      --color-bg-primary-light-05: #20202050;
+      --color-bg-secondary: #814270;
+      --color-accent-primary: #814270;
+
+      /* spacing */
+      --space: 1rem;
+      --space-double: calc(var(--space) * 2);
+      --space-half: calc(var(--space) / 2);
+
+      --radius: 0.25rem; /* 4px */
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-family: var(--font-family);
+      -webkit-font-smoothing: antialiased;
+      line-height: var(--line-height);
+      scroll-behavior: smooth;
+    }
+
+    body {
+      min-height: 100vh;
+      min-width: 420px;
+      background-color: var(--color-bg-primary);
+      color: var(--color-primary);
+      position: relative;
+      /* Grid */
+      display: grid;
+      grid-template-rows: auto 1fr;
+      gap: var(--space);
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, #4f4f4f2e, transparent),
+          linear-gradient(to bottom, #4f4f4f2e, transparent);
+        background-size: 20px;
+        z-index: -1;
+      }
+    }
+
+    img,
+    picture,
+    video,
+    canvas,
+    svg {
+      display: block;
+      max-width: 100%;
+    }
+
+    input,
+    button,
+    textarea,
+    select {
+      font: inherit;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      /* margin: 0.8em 0; */
+      margin: 0;
+      padding: 0;
+      font-weight: var(--weight-light);
+      line-height: var(--line-height-x);
+      text-wrap: balance;
+    }
+
+    h1,
+    .h1 {
+      font-size: var(--h1);
+    }
+
+    h2,
+    .h2 {
+      font-size: var(--h2);
+    }
+
+    h3,
+    .h3 {
+      font-size: var(--h3);
+    }
+
+    h4,
+    .h4 {
+      font-size: var(--h4);
+    }
+
+    h5,
+    .h5 {
+      font-size: var(--h5);
+    }
+
+    h6,
+    .h6 {
+      font-size: var(--h6);
+    }
+
+    .h7 {
+      font-size: var(--small);
+    }
+
+    .h8 {
+      font-size: var(--x-small);
+    }
+
+    p,
+    figcaption,
+    .p {
+      margin-bottom: var(--space);
+      font-size: var(--h6);
+      text-wrap: pretty;
+    }
+
+    main {
+      margin-inline: var(--space-double);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</html>

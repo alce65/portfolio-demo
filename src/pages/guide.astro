@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Guia de estilos de los ejercicios de CSS/JS"
+    />
+    <title>Style guide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="favicon.svg" type="image/svg+xml" />
+  </head>
+  <body>
+    <section class="colors">
+      <div class="" title="bronze"></div>
+      <div class="" title="golden"></div>
+      <div class="" title="brown light"></div>
+      <div class="" title="white like"></div>
+      <div class="" title="bisque like"></div>
+      <div class="" title="brown / marron"></div>
+      <div class="n" title="brown dark"></div>
+      <div class="" title="black like"></div>
+    </section>
+    <section class="headings">
+      <h1>This is Heading 1</h1>
+      <h2>This is Heading 2</h2>
+      <h3>This is Heading 3</h3>
+      <h4>This is Heading 4</h4>
+      <h5>This is Heading 5</h5>
+      <h6>This is Heading 6</h6>
+      <p>Parrafo aclaratorio del header</p>
+      <nav>
+        <ul>
+          <li><a href="#">A text link as nav element</a></li>
+        </ul>
+      </nav>
+      <button>Call to action</button>
+      <button disabled>Call ... disabled</button>
+    </section>
+    <section class="texts">
+      <p>
+        This is a paragraph. Lorem ipsum dolor sit, amet consectetur adipisicing
+        elit. Quisquam, pariatur.
+      </p>
+      <button class="btn-primary">Call to action</button>
+      <button disabled>Call ... disabled</button>
+      <p>
+        <a href="#">A text link by itself</a>
+      </p>
+      <p>
+        <strong>Strongly emphasized text</strong>
+      </p>
+      <p>
+        <em>Emphasized text</em>
+      </p>
+      <blockquote>
+        <p>A paragraph inside of a blockquote, said by a famous person.</p>
+      </blockquote>
+    </section>
+    <section class="lists">
+      <ul>
+        <li>This is an unordered list.</li>
+        <li>Second thing.</li>
+        <li>Third thing.</li>
+      </ul>
+      <ol>
+        <li>This is an ordered list.</li>
+        <li>Second thing.</li>
+        <li>Third thing.</li>
+      </ol>
+    </section>
+    <section class="forms">
+      <form>
+        <fieldset>
+          <label class="input">
+            <input type="text" id="name" name="name" placeholder=" " />
+            <span>Name:</span>
+          </label>
+          <label class="input">
+            <input type="email" id="email" name="email" placeholder=" " />
+            <span>Email:</span>
+          </label>
+          <label class="input">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder=" "
+            />
+            <span>Password: </span>
+            <i onclick="(() => console.log('Ver passwd'))()">👁</i>
+          </label>
+          <label class="input">
+            <textarea rows="4" placeholder=" "></textarea>
+            <span>Más información</span>
+          </label>
+        </fieldset>
+        <fieldset class="radio inline">
+          <legend>Horizontal options</legend>
+          <label>
+            <input type="radio" name="options-h" value="1" />
+            Option 1
+          </label>
+          <label>
+            <input type="radio" name="options-h" value="2" />
+            Option 2
+          </label>
+        </fieldset>
+        <fieldset class="radio block">
+          <legend>Vertical Options</legend>
+          <label>
+            <input type="radio" name="options-v" value="1" />
+            Option 1
+          </label>
+          <label>
+            <input type="radio" name="options-v" value="2" />
+            Option 2
+          </label>
+        </fieldset>
+        <fieldset>
+          <label class="checkbox">
+            <input type="checkbox" value="1" />
+            I agree to the terms and conditions
+          </label>
+        </fieldset>
+        <fieldset>
+          <label class="select">
+            <span>Selecciona una opción</span>
+            <select>
+              <option value="1">Option 1</option>
+              <option value="2">Option 2</option>
+              <option value="3">Option 3</option>
+            </select>
+          </label>
+        </fieldset>
+        <fieldset>
+          <label class="file">
+            <span>Upload a file</span>
+            <input type="file" />
+          </label>
+        </fieldset>
+        <div class="buttons">
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </form>
+    </section>
+    <section class="images">
+      <figure>
+        <img
+          src="https://assets.codepen.io/296057/fem-blindfold-475.jpg"
+          alt="The three men of Magenta Lime, blindfolded."
+        />
+        <figcaption>Magenta Lime will rock your world.</figcaption>
+      </figure>
+    </section>
+  </body>
+</html>
+<style>
+  :root {
+    /* typography */
+    --base-size: 1rem;
+    --scale: 1.25;
+    --h1: calc(var(--h2) * var(--scale)); /* 3.052rem */
+    --h2: calc(var(--h3) * var(--scale)); /* 2.441rem */
+    --h3: calc(var(--h4) * var(--scale)); /* 1.953rem */
+    --h4: calc(var(--h5) * var(--scale)); /* 1.563rem */
+    --h5: calc(var(--h6) * var(--scale)); /* 1.25rem */
+    --h6: var(--base-size); /* 1rem */
+    --small: var(--base-size) / var(--scale); /* 0.8rem */
+    --x-small: var(--small) / var(--scale); /* 0.64rem */
+
+    --line-height-x: 1.25;
+    --line-height: 1.5;
+    --line-height-l: 1.75;
+
+    /* weight */
+
+    --weight-light: 300;
+    --weight-regular: 500;
+    --weight-medium: 700;
+    --weight-bold: 900;
+
+    --bisque-like: #cec5b4;
+    --bisque: #ffe4c4;
+    --golden: goldenrod;
+    --brown-dark: rgb(86, 45, 45);
+    --brown: brown;
+    --brown-light: rgb(168, 88, 88);
+    --bronze: #988758;
+    --white: #f4f4f4;
+    --black: #050d14;
+    --gray-light: #f9f9f9;
+    --gray: #bababa;
+    --gray-dark: #333;
+
+    /* intention colors */
+
+    /* Main colors*/
+    /* --primary:  */
+    --color-primary: var(--brown-dark);
+    --color-primary-background: var(--bisque-like);
+    --color-accent: var(--bisque-like);
+    --color-accent-background: var(--brown);
+    --color-link: var(--brown-dark);
+    --color-link-hover: var(--brown-light);
+
+    /* Brown area colors */
+
+    --color-secondary: var(--bisque-like);
+    --color-secondary-background: var(--brown);
+    --color-accent-secondary: var(--brown-dark);
+    --color-accent-secondary-background: var(--bronze);
+    --color-link-hover-secondary: var(--golden);
+
+    /* Gray area colors*/
+    --color-secondary-gray: var(--black);
+    --color-secondary-background-gray: var(--gray);
+    --color-primary-background-gray: var(--gray-light);
+
+    /* spacing */
+
+    --space: 1rem;
+    --space-l: calc(var(--space) * 1.5); /* 1.5rem */
+    --space-double: calc(var(--space) * 2); /* 2rem */
+    --space-triple: calc(var(--space) * 3); /* 3rem */
+    --space-quadruple: calc(var(--space) * 4); /* 4rem */
+    --space-half: calc(var(--space) / 2); /* 0.5rem */
+    --space-quarter: calc(var(--space) / 4); /* 0.25rem */
+
+    --radius: 0.25rem; /* 4px */
+
+    /* fonts */
+    --sans-base: "Manrope", sans-serif;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    overflow-wrap: break-word;
+  }
+
+  body {
+    font-family: var(--sans-base);
+    font-weight: var(--weight-light);
+    line-height: var(--line-height);
+    -webkit-font-smoothing: antialiased;
+    background-color: var(--color-primary-background);
+    color: var(--color-primary);
+    font-size: var(--base-size);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+  }
+
+  img,
+  picture,
+  video,
+  canvas,
+  svg {
+    display: block;
+    max-width: 100%;
+  }
+
+  input,
+  button,
+  textarea,
+  select {
+    font: inherit;
+  }
+
+  button {
+    font-family: var(--sans-base);
+    font-weight: var(--weight-medium);
+    font-size: var(--h6);
+    padding: var(--space-half) var(--space);
+    border: 1px solid var(--gray);
+    border-radius: var(--radius);
+
+    background-color: var(--color-accent-background);
+    color: var(--color-accent);
+    cursor: pointer;
+    &:hover {
+      background-color: var(--color-accent-secondary-background);
+      color: var(--color-accent-secondary);
+    }
+
+    &:disabled {
+      background-color: var(--color-secondary-background);
+      color: var(--color-secondary);
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+
+  section {
+    padding: var(--space);
+    margin: var(--space-double);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--radius);
+    &.headings {
+      color: var(--color-secondary);
+      background-color: var(--color-secondary-background);
+      padding-block-start: 0;
+      padding-block-end: var(--space-double);
+
+      button {
+        background-color: var(--color-secondary);
+        color: var(--color-secondary-background);
+        &:hover {
+          background-color: var(--color-accent-secondary-background);
+          color: var(--color-accent-secondary);
+        }
+
+        &:disabled {
+          background-color: var(--color-primary-background);
+          color: var(--color-primary);
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+    }
+    &.lists {
+      ul,
+      ol {
+        padding: var(--space);
+      }
+    }
+  }
+
+  nav {
+    margin-bottom: var(--space);
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+    a:hover {
+      text-decoration: underline;
+      color: var(--color-link-hover-secondary);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0.8em 0;
+    font-weight: var(--weight-light);
+    line-height: var(--line-height-x);
+    text-wrap: balance;
+  }
+
+  h1,
+  .h1 {
+    font-size: var(--h1);
+  }
+
+  h2,
+  .h2 {
+    font-size: var(--h2);
+  }
+
+  h3,
+  .h3 {
+    font-size: var(--h3);
+  }
+
+  h4,
+  .h4 {
+    font-size: var(--h4);
+  }
+
+  h5,
+  .h5 {
+    font-size: var(--h5);
+  }
+
+  h6,
+  .h6 {
+    font-size: var(--h6);
+  }
+
+  p,
+  figcaption,
+  .p {
+    margin-bottom: var(--space);
+    font-size: var(--h6);
+    text-wrap: pretty;
+  }
+
+  a {
+    color: var(--color-link);
+  }
+  a:hover {
+    color: var(--color-link-hover);
+    text-decoration: none;
+  }
+
+  /* colors */
+  .colors {
+    display: flex;
+    flex-flow: row wrap;
+    gap: var(--space);
+
+    & > * {
+      width: 3rem;
+      height: 3rem;
+    }
+    :nth-of-type(1) {
+      background-color: var(--bronze);
+    }
+    :nth-of-type(2) {
+      background-color: var(--golden);
+    }
+    :nth-of-type(3) {
+      background-color: var(--brown-light);
+    }
+    :nth-of-type(4) {
+      background-color: var(--white);
+      border: 1px solid var(--gray-light);
+    }
+    :nth-of-type(5) {
+      background-color: var(--bisque-like);
+      border: 1px solid var(--white);
+    }
+    :nth-of-type(6) {
+      background-color: var(--brown);
+    }
+    :nth-of-type(7) {
+      background-color: var(--brown-dark);
+    }
+    :nth-of-type(8) {
+      background-color: var(--black);
+    }
+  }
+
+  /* form */
+
+  form {
+    fieldset {
+      border: none;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    label.input {
+      display: flex;
+      flex-flow: column nowrap;
+      position: relative;
+      margin-block-start: var(--space-double);
+
+      &:not(:last-of-type) {
+        margin-block-end: var(--space-double);
+      }
+
+      input,
+      textarea {
+        /* //appearance: none; */
+        padding: var(--space-half);
+        border: none;
+        border-bottom: 1px solid;
+        background-color: inherit;
+
+        &:focus {
+          outline: 1px solid var(--color-accent-background);
+          border-color: var(--color-accent-background);
+        }
+
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0 50px var(--color-primary-background) inset; /* Change the color to your own background color */
+          -webkit-text-fill-color: var(--color-primary);
+        }
+      }
+
+      i {
+        cursor: pointer;
+      }
+
+      span {
+        position: absolute;
+        bottom: 0.2rem;
+      }
+
+      input:focus + span,
+      input:not(:placeholder-shown) + span,
+      textarea:focus + span,
+      textarea:not(:placeholder-shown) + span {
+        top: -2rem;
+        /* font-size: var(--small);
+      color: var(--color-accent); */
+      }
+
+      &:has(input[type="password"]) {
+        flex-flow: row nowrap;
+        input {
+          flex-grow: 1;
+        }
+      }
+    }
+
+    label.select {
+      display: flex;
+      flex-flow: column nowrap;
+      position: relative;
+      margin-block-start: var(--space-double);
+
+      &:not(:last-of-type) {
+        margin-block-end: var(--space-double);
+      }
+
+      select {
+        padding: var(--space-half);
+        border: none;
+        border-bottom: 1px solid;
+        background-color: inherit;
+
+        &:focus {
+          outline: 1px solid var(--color-accent);
+          border-color: var(--color-accent);
+        }
+
+        option {
+          padding: var(--space-half);
+          color: var(--color-primary);
+          background-color: var(--color-primary-background);
+        }
+      }
+    }
+
+    fieldset.radio {
+      flex-direction: row;
+      margin-block-start: var(--space-double);
+      accent-color: var(--color-accent-background);
+
+      legend {
+        margin-bottom: var(--space-half);
+        border-bottom: 1px solid;
+      }
+
+      &.inline {
+        flex-flow: row wrap;
+        gap: var(--space);
+      }
+
+      &.block {
+        flex-flow: column nowrap;
+        gap: var(--space-half);
+      }
+    }
+
+    label.checkbox {
+      display: block;
+      margin-block-start: var(--space-double);
+      accent-color: var(--color-accent-background);
+      &:not(:last-of-type) {
+        margin-block-end: var(--space-double);
+      }
+    }
+
+    label.file {
+      margin-block-start: var(--space-double);
+      &:not(:last-of-type) {
+        margin-block-end: var(--space-double);
+      }
+
+      span {
+        display: inline-block;
+        border: 1px solid;
+        padding: var(--space-half) var(--space);
+        cursor: pointer;
+        margin-inline-end: var(--space-half);
+        background-color: var(--color-accent-background);
+        color: var(--color-accent);
+        border-radius: var(--radius);
+        font-weight: var(--weight-medium);
+
+        &:hover {
+          background-color: var(--color-accent-secondary-background);
+          color: var(--color-accent-secondary);
+        }
+      }
+
+      input[type="file"]::file-selector-button {
+        display: none;
+      }
+    }
+
+    button {
+      flex-grow: 0;
+      margin-block-start: var(--space-double);
+      padding: var(--space-half) var(--space);
+      border: 1px solid var(--gray);
+      border-radius: var(--radius);
+      background-color: var(--color-accent-background);
+      color: var(--color-accent);
+      cursor: pointer;
+
+      &:hover {
+        background-color: var(--color-accent-secondary-background);
+        color: var(--color-accent-secondary);
+      }
+    }
+  }
+</style>

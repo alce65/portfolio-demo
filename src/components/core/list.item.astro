@@ -1,0 +1,51 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+  paper: CollectionEntry<"papers">["data"] & { slug: string };
+};
+
+const { paper } = Astro.props;
+---
+
+<li title={"slug: " + paper.slug}>
+  <a href={"/papers/" + paper.slug}>
+    <h3 class="h5">
+      {paper.serieOrder} - {paper.title}
+    </h3>
+    <p>{paper.description}</p>
+  </a>
+</li>
+
+<style>
+  li {
+    margin-bottom: 1rem;
+    padding: 0;
+  }
+
+  h3,
+  p {
+    margin: 0;
+  }
+
+  p {
+    font-size: var(--small);
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding-block: var(--space-half);
+    padding-inline: var(--space);
+    border-radius: var(--space-half);
+    background-color: var(--color-primary-dark-05);
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: var(--color-primary-dark);
+      color: var(--color-bg-primary-light);
+      transform: scale(1.01);
+    }
+  }
+</style>

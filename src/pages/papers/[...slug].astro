@@ -1,0 +1,99 @@
+---
+import { render } from "astro:content";
+import Layout from "../../layouts/layout.astro";
+import { getFullPaper } from "../../services/papers.repo";
+import type { CollectionEntry } from "astro:content";
+import Badge from "../../components/core/badge.astro";
+import PubDate from "../../components/core/pub.date.astro";
+
+export const prerender = false;
+
+// [1] Se puede obtener el slug de Astro.params
+// para luego recuperar el artículo completo
+
+const { slug } = Astro.params;
+
+if (!slug) {
+  return Astro.redirect("/404");
+}
+
+const fullPaper: CollectionEntry<"papers"> | null = await getFullPaper(slug);
+
+if (!fullPaper) {
+  return Astro.redirect("/404");
+}
+
+// [2] La alternativa de usar Astro.props
+// para obtener el artículo completo
+// NO esta disponible al usar SSR
+
+// interface Props {
+//   Paper: CollectionEntry<"papers">;
+// }
+
+// const { Paper } = Astro.props;
+
+// En cualquier caso
+
+const { data } = fullPaper;
+const { Content } = await render(fullPaper);
+
+console.log(data);
+---
+
+<Layout>
+  <hgroup>
+    <h1>{data.title}</h1>
+    <p>{data.description}</p>
+  </hgroup>
+  <div class="tags">
+    {data.tags.map((tag) => <Badge>{tag}</Badge>)}
+  </div>
+  <PubDate date={data.date} />
+  <div class="wrapper">
+    <Content />
+  </div>
+</Layout>
+
+<style>
+  .wrapper {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .wrapper {
+    --color1: #dac2a5;
+    --color: var(--color-accent-primary);
+
+    h2 {
+      border-block-start: 1px solid var(--color);
+      margin-block-start: var(--space-double);
+      margin-block-end: var(--space);
+      padding-block-start: var(--space);
+      font-size: var(--h3);
+      color: var(--color);
+    }
+
+    h3 {
+      font-size: var(--h4);
+      color: var(--color);
+    }
+
+    h4 {
+      font-size: var(--h5);
+      color: var(--color);
+    }
+
+    a {
+      color: var(--color-primary);
+      color: var(--color1);
+    }
+
+    pre {
+      white-space: pre-wrap;
+    }
+  }
+</style>
+
+<style is:inline></style>

@@ -1,0 +1,43 @@
+---
+import Layout from "../../layouts/layout.astro";
+import { getAllPapers } from "../../services/papers.repo";
+import Section from "../../components/core/section.astro";
+import ListItem from "../../components/core/list.item.astro";
+
+const papers = (await getAllPapers()).sort(
+  (a, b) => a.serieOrder - b.serieOrder
+);
+
+const newSet = new Set(papers.map((paper) => JSON.stringify(paper.serie)));
+const series = [...newSet]
+  .map((item) => JSON.parse(item))
+  .sort((a, b) => a.id - b.id);
+---
+
+<Layout>
+  {
+    series.map(({ title, id }) => (
+      <Section id={title} title={title}>
+        <ul>
+          {papers
+            .filter((paper) => paper.serie.id === id)
+            .map((paper) => (
+              <ListItem paper={paper} />
+            ))}
+        </ul>
+      </Section>
+    ))
+  }
+</Layout>
+
+<style>
+  .h2 {
+    /* font-size: 2rem; */
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+</style>

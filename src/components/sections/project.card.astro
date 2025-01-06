@@ -1,0 +1,97 @@
+---
+import { Picture } from "astro:assets";
+import type { Project } from "../../types/data";
+import Badge from "../core/badge.astro";
+import BadgeSkill from "../core/badge.skill.astro";
+
+interface Props extends Project {}
+
+const { name, company, summary, urls, image, highlights, technologies } =
+  Astro.props;
+
+// const imagePath = image.startsWith("http")
+//   ? image
+//   : `/src/assets/projects/${image}`;
+const isActive = highlights[0] === "active";
+---
+
+<article class="project">
+  <hgroup>
+    <h3 class="h4">
+      {name}
+    </h3>
+    <p>{company}</p>
+    {isActive && <Badge>Activo</Badge>}
+  </hgroup>
+  <p class="h7">{summary}</p>
+  <Badge>
+    <a href={urls[0]} target="_blank" rel="noopener noreferrer">
+      Ver proyecto
+    </a>
+  </Badge>
+  {
+    typeof image === "string" ? (
+      <Picture src={image} inferSize alt={name} />
+    ) : (
+      <Picture
+        src={image as ImageMetadata}
+        formats={["avif", "webp"]}
+        alt={name}
+        layout="responsive"
+        fit="cover"
+        position="center"
+      />
+    )
+  }
+  <footer>
+    {technologies.map((tech) => <BadgeSkill>{tech}</BadgeSkill>)}
+  </footer>
+</article>
+
+<style>
+  article.project {
+    max-width: 600px;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space);
+    padding: var(--space);
+    border: 1px solid var(--color-primary-dark);
+    border-radius: var(--radius);
+    box-shadow: 5px 5px 15px 5px var(--color-primary-dark-05);
+  }
+
+  hgroup {
+    flex: 1;
+    p {
+      margin: 0;
+      color: var(--color-primary-dark);
+    }
+
+    div.badge {
+      position: absolute;
+      top: 19px;
+      right: -24px;
+      padding-inline: 2rem;
+      clip-path: polygon(21% 0, 79% 0%, 100% 100%, 0 100%);
+      transform: rotate(45deg);
+      border-radius: 0;
+      color: var(--color-primary-dark);
+    }
+  }
+  p {
+    flex: 2;
+  }
+
+  a {
+    color: var(--color-primary);
+    text-decoration: none;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius);
+  }
+</style>

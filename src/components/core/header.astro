@@ -1,0 +1,22 @@
+---
+import Menu from "./menu.astro";
+---
+
+<div class="header-container">
+  <header>
+    <Menu />
+  </header>
+</div>
+
+<style>
+  .header-container {
+    background-color: var(--color-bg-primary-light);
+    padding-inline: var(--space-double);
+    padding-block: var(--space);
+  }
+
+  header {
+    color: var(--color-primary);
+    max-width: 1120px;
+  }
+</style>

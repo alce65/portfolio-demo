@@ -1,0 +1,97 @@
+---
+import HTML from "../../icons/technologies/html.astro";
+import SVG from "../../icons/technologies/svg.astro";
+import CSS from "../../icons/technologies/css.astro";
+import Figma from "../../icons/technologies/figma.astro";
+import Ux from "../../icons/technologies/ux.astro";
+import Markdown from "../../icons/technologies/markdown.svg";
+import JS from "../../icons/technologies/js.astro";
+import TypeScript from "../../icons/technologies/typescript.astro";
+import JSON from "../../icons/technologies/json.svg";
+import AstroLogo from "../../icons/technologies/astro-logo.astro";
+import Angular from "../../icons/technologies/angular.astro";
+import RxJs from "../../icons/technologies/rxjs.astro";
+import React from "../../icons/technologies/react.astro";
+import Node from "../../icons/technologies/node.js.astro";
+import Express from "../../icons/technologies/express.astro";
+import Nest from "../../icons/technologies/nestjs.svg";
+import Prisma from "../../icons/technologies/prisma.svg";
+import Postgres from "../../icons/technologies/postgres.svg";
+import MySQL from "../../icons/technologies/mysql.svg";
+import JWT from "../../icons/technologies/jwt.svg";
+import Cloudinary from "../../icons/technologies/cloudinary.svg";
+import Jasmine from "../../icons/technologies/jasmine.astro";
+import Karma from "../../icons/technologies/karma.astro";
+import Jest from "../../icons/technologies/jest.astro";
+import Cypress from "../../icons/technologies/cypress.astro";
+import Vite from "../../icons/technologies/vite.svg";
+import VSC from "../../icons/technologies/visual-studio-code.svg";
+import Git from "../../icons/technologies/git.astro";
+import GitHub from "../../icons/technologies/github.astro";
+import GitHubActions from "../../icons/technologies/actions.astro";
+import CI_CD from "../../icons/technologies/ci-cd.astro";
+
+interface Props {
+  skill: string;
+  width?: string;
+  height?: string;
+}
+
+type Icon = Record<string, (_props: Record<string, any>) => any>;
+const iconsCollection: Icon = {
+  html: HTML,
+  svg: SVG,
+  css: CSS,
+  figma: Figma,
+  "ux/ui": Ux,
+  markdown: Markdown,
+  javascript: JS,
+  typescript: TypeScript,
+  json: JSON,
+  astro: AstroLogo,
+  angular: Angular,
+  rxjs: RxJs,
+  react: React,
+  "node.js": Node,
+  express: Express,
+  nestjs: Nest,
+  prisma: Prisma,
+  postgres: Postgres,
+  mysql: MySQL,
+  jwtoken: JWT,
+  cloudinary: Cloudinary,
+  jasmine: Jasmine,
+  karma: Karma,
+  jest: Jest,
+  cypress: Cypress,
+  vite: Vite,
+  vsc: VSC,
+  git: Git,
+  github: GitHub,
+  "github actions": GitHubActions,
+  "ci/cd": CI_CD,
+};
+
+const { skill, width = "1rem", height = "1rem" } = Astro.props;
+const Icon = iconsCollection[skill?.toLocaleLowerCase()];
+---
+
+<div class="badge-skill">
+  {Icon && <Icon width={width} height={height} />}
+  <span>{skill}</span>
+</div>
+
+<style>
+  div.badge-skill {
+    display: inline-flex;
+    padding: 0.25em 0.5em;
+    gap: 0.5em;
+    align-items: flex-end;
+    border-radius: 0.5em;
+    font-size: 0.75em;
+    font-weight: 700;
+    /* text-transform: uppercase; */
+    background-color: var(--color-primary-dark-05);
+    color: var(--color-primary-dark);
+  }
+</style>

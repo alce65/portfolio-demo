@@ -1,0 +1,23 @@
+---
+import { Picture } from "astro:assets";
+import img from "../../assets/alce65.jpg";
+
+const name = "Alejandro";
+const alt = name + " Avatar";
+---
+
+<Picture src={img} formats={["avif", "webp"]} alt={alt} />
+<!-- <picture>
+  <source type="image/avif" srcset={avatar + ".avif"} />
+  <source type="image/webp" srcset={avatar + ".webp"} />
+  <img src={avatar + ".jpg"} alt={alt} title={name} />
+</picture> -->
+
+<style>
+  img {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: auto;
+  }
+</style>

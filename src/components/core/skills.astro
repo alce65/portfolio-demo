@@ -1,0 +1,34 @@
+---
+import { getAllSkills } from "../../services/projects.repo";
+import BadgeSkill from "./badge.skill.icon.astro";
+
+const skillsList = await getAllSkills();
+---
+
+<div class="skills">
+  <h2 class="h5">Tecnologías</h2>
+  {
+    skillsList.map((skill) => (
+      <BadgeSkill width="1.5rem" height="1.5rem" skill={skill} />
+    ))
+  }
+</div>
+
+<style>
+  div.skills {
+    margin-top: var(--space-double);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-half);
+    padding: var(--space);
+    border: 1px solid var(--color-primary-05);
+    border-radius: var(--radius);
+
+    h2 {
+      text-align: center;
+      flex: 1 0 100%;
+      color: var(--color-accent-primary);
+      margin-block-end: var(--space);
+    }
+  }
+</style>

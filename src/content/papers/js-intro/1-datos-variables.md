@@ -1,0 +1,228 @@
+---
+title: Introducción. Datos y Variables
+description: Sentencias, datos y variables en JavaScript
+date: 2021-09-06
+tags: [js, variables, datos, strings, template strings]
+serie: { "id": 2, "title": "JS Basics" }
+serieOrder: 1
+---
+
+- Sentencias. La primera aplicación
+- Ejecutando JS
+  - Comentarios de código
+- Datos
+- Variables
+  - Variables en JS
+  - Declaración de variables con let. Asignación de valores
+  - Declaración de variables con y asignación de valores con const
+  - Sentencias de asignación
+- Operaciones con strings. Concatenación
+  - Template strings
+
+## Sentencias. La primera aplicación
+
+La programación imperativa (la que se utiliza normalmente) consiste en la creación de una serie se **sentencias** (statements) que se van a ejecutar una tras otra, dándole a nuestra máquina las instrucciones de lo que queremos que haga.
+
+En JavaScript (JS) es fácil distinguir estas sentencias:
+
+- en principio cada una de ellas ocupa una linea
+- para que quede aun más claro, sobre todo si no se cumple lo primero, terminamos las sentencias con un punto y coma (;)
+
+A la hora de crear las sentencias del código usaremos las palabras reservadas del lenguaje, los nombres de variables y funciones y los operadores. En todos los casos, tienes que tener en cuenta que el lenguaje JS **distingue mayúsculas y minúsculas** (case sensitive). Por ejemplo las palabra reservada `for` no puede ser sustituida por For o FOR.
+
+Nuestra primera aplicación, el _'Hola mundo'_ que se suele usar en programación como el ejemplo más simple de cualquier lenguaje, se limita a una única sentencia.
+
+```js
+console.log("Hola mundo");
+```
+
+## Ejecutando JS
+
+> [📹video 1](https://www.youtube.com/watch?v=nWPuJXN9U8c)
+
+Por el momento puedes usar la misma herramienta online que te servirá para la prueba de admisión: [Code Interview](https://codeinterview.io/)
+
+Tendrás que crear una cuenta y confirmar el correo que recibes.
+
+Una vez dentro de la aplicación podrás crear un espacio de trabajo seleccionando "_new interview_" .
+Aparecerá un ejemplo de código y en la parte inferior podrás cambiar el lenguaje a "_JavaScript (Node)_"
+
+Después de eliminar el ejemplo que se muestra en la pantalla, podrás teclear o copiar tu código JS.
+
+> 🛠️ Prueba con el `console.log("Hola mundo");` y para ver que funciona pulsa en el botón "_Run_" de la parte inferior.
+
+### Comentarios de código
+
+Quizás te has fijado que el ejemplo que borraste comenzaba con unas líneas un poco diferentes: los **comentarios** de nuestro código.
+
+En JS hay dos formas de hacerlo, como puedes ver a continuación
+
+```js
+// Comentario de una línea, termina al final de esta
+
+/*
+ Comentario de multiples líneas
+ No termina hasta que aparecen los siguientes símbolos
+*/
+```
+
+## Datos
+
+El objetivo de estas sentencias es resolver alguna necesidad planteada por los futuros usuarios de nuestra aplicación.
+En gran parte eso supone tomar una serie de **datos** y modificarlos de acuerdo con las funcionalidades requeridas en nuestra aplicación, para terminar entregando el resultado a los usuarios, lo que incluye, en muchos casos, mostrar esos datos o alguno de ellos en la pantalla.
+
+Al conjunto de los datos de la realidad que nos interesan para nuestro problema concreto lo denominamos **modelo de datos**. Si mi aplicación es para una escuela, la edad de las personas puede ser relevante, y por tanto parte del modelo, pero probablemente no me interese en absoluto su nivel de colesterol o su talla de zapatos, que por tanto no formaran parte del modelo de datos.
+
+🎯 Los **valores** de los datos pueden ser de diferentes **tipos**; únicamente 8 en el caso de JS. De momento quédate con la idea de los más evidentes.
+
+- textos o cadenas de caracteres (tipo **string**), que indicaremos entre comillas simples (''), dobles ("") o inclinadas (``)
+- números (tipo **number**), incluyendo tanto enteros y decimales, como positivos y negativos
+
+Por ejemplo podemos tener como valores 'Pepe' o 'rojo', de tipo string, y 23 o -2.5 de tipo number.
+
+## Variables
+
+Sin embargo, los valores solos, sin corresponder a algún elemento del problema que tratamos de resolver, no tienen apenas utilidad. ¿Quién es Pepe? ¿Qué es rojo? ¿Qué es lo que vale 23 o -2.5?. Ahí es donde entra en juego la necesidad de definir a que se refiere cada dato, como combinaciones de un valor con una clave o referencia, que se denomina **variable**:
+
+- userName = 'Pepe',
+- colorCoche = 'rojo',
+- edad = 23,
+- saldo = -2.5.
+
+🎯 Técnicamente podemos decir que las **variables** son **etiquetas** (labels) que hacen referencia a un valor o que dan nombres a las localizaciones donde se almacenan (named storage) los valores.
+
+Esos etiquetas le confieren sentido a los diferentes valores de los datos, indicando a que parte de nuestro modelo corresponden.
+
+A veces se usan las metáforas de etiquetas que _apuntan_ a un valor, para que sepamos a que se refiere o de _cajas con nombre_ donde se guardan los valores.
+
+### Variables en JS
+
+> [📹video 2](https://www.youtube.com/watch?v=g-jejKpehQw&t=2s)
+
+Por convenio, los nombres de las variables en JS utilizan un formato de escritura denominada **camelCase**, que consiste en
+
+- empezar siempre con minúscula
+- juntar las palabras empezando cada una de ellas con mayúscula
+
+Sólo en el caso de las funciones constructoras o las clases (que veras en el precurso), se utiliza **PascalCase**, poniendo también en mayúscula la primera letra del nombre.
+
+Para poder usar una variable, tenemos que
+
+- declararla (sería como crear la etiqueta que mencionábamos anteriormente)
+- asignarle un valor (inicializarla)
+
+Ambos procesos pueden ser simultáneos, en una misma sentencia, o separarse en dos.
+
+🎯 La declaración de variables en JS se realiza mediante las palabras reservadas **let** y **const**
+
+### Declaración de variables con let. Asignación de valores
+
+La palabra reservada **let** declara una variable cuyo valor puede ser reasignado tantas veces como sea necesario.
+Por tanto la declaración puede incluir una asignación inicial o dejarlo para más adelante
+
+```js
+// declaramos una variable sin asignarle valor
+// (en realidad JS le da un valor undefined, pero eso no debe importarte ahora)
+let foo;
+console.log(foo); // undefined
+// más adelante le asignamos un valor
+foo = "Pepe";
+console.log(foo); // 'Pepe'
+// declaramos una variable y le asignamos un valor
+let bar = 20;
+console.log(bar); // 20
+// le reasignamos un nuevo valor a la variable anterior
+bar = 30;
+console.log(bar); // 30
+```
+
+> 🛠️ Puedes probar este código en _Code Interview_. Los valores comentados después de cada console.log() aparecerán en la consola de la derecha, que muestra el resultado de la ejecución de nuestro código.
+
+### Declaración de variables con y asignación de valores con const
+
+La palabra reservada **const** declara una variable cuyo valor NO puede ser reasignado nunca, por lo que siempre debe incluir la asignación del valor de la variable.
+
+```js
+// declaramos una variable asignándole su valor
+const foo = "Valor para siempre";
+console.log(foo); // 'Pepe'
+// Si intentas ejecutar la línea siguiente
+// Tendrás un error de ejecución:
+// TypeError: Assignment to constant variable.
+foo = "Nuevo valor";
+```
+
+---
+
+🥷 Esto no significa que las variables de tipo const no puedan **cambiar de valor**. Ya veremos que si se trata de objetos, se pueden añadir, eliminar y modificar sus propiedades sin que se reasigne un nuevo valor. Esto se conoce como **mutabilidad**.
+
+---
+
+### Sentencias de asignación
+
+Tanto con let como con const hemos visto que la asignación de valor se realiza gracias al **operador de asignación**, que es el símbolo igual (=)
+
+- a la izquierda de este operador siempre estará la **variable** o variables que reciben un valor
+- todo lo que haya a la derecha del operador constituye uns **expresión** (expression)
+
+Las expresiones pueden ser
+
+- literales, es decir valores
+- variables
+- cualquier combinación de los anteriores mediante operadores
+
+🎯 Las expresiones siempre se evalúan a un único valor, que en las sentencias de asignación, se asigna a la correspondiente variable de la izquierda del igual.
+
+Veamos unos ejemplos
+
+```js
+// Tenemos dos variables que luego usaremos
+const initial = 11;
+// En esta sentencia asignamos directamente una expresión literal (o simplemente literal)
+const result1 = 22;
+// En este caso la expresión cuyo valor asignamos opera con literales y variables
+const result2 = initial * 2;
+// En este caso la expresión cuyo valor asignamos opera con variables
+const result3 = initial + initial;
+// El valor de las tres variables es idéntico, con independencia de comp ha sido obtenido
+console.log(result1, result2, result3); // 22 22 22
+```
+
+## Operaciones con strings. Concatenación
+
+Para conseguir valores de tipo string, utilizamos **comillas** simples ('') o dobles ("") en principio indistintamente. En distintos equipos de programación o conjuntos de reglas de estilo, se decide por una de las dos opciones. Lo importante es la coherencia del código, y que no se mezclen en el mismo proyecto las dos formas de crear strings.
+
+🎯 Si se necesita unir varias cadenas de caracteres se utiliza el operador de concatenación (+).
+
+```js
+const name = "Pepe";
+const age = 34;
+// creamos una expresión que concatena varias cadenas,
+// tanto literales como variables
+// y asignamos el resultado de evaluar la expresión
+// a una nueva variable
+const greetings = "Hola, me llamo " + name + " y tengo " + age + " años!!";
+console.log(greetings); // Hola, me llamo Pepe y tengo 34 años!!
+```
+
+---
+
+🥷 Este símbolo + corresponde también al operador de signo positivo y al de la suma de números, por lo que se dice que es un operador sobrecargado. Como veremos esto puede dar problemas en algunos casos.
+
+---
+
+### Template strings
+
+En JS moderno, creado desde 2015 y conocido como ECMAScript 6+ (ES6+) hay una nueva forma de crear los strings, conocida como **template strings**, que se definen mediante comillas inclinadas (``).
+Además de conservar el formato en el que escribamos (espacios, tabuladores, saltos de línea), estos strings permiten interpolar variables mediante el operador ${}
+
+```js
+const name = "Pepe";
+const age = 34;
+// creamos una expresión que concatena varias cadenas,
+// mediante un template string
+const greetings = `Hola, me llamo ${name} y tengo ${age} años!!`;
+console.log(greetings); // Hola, me llamo Pepe y tengo 34 años!!
+```
+
+Como puedes ver este formato simplifica mucho la concatenación, por lo que se utiliza habitualmente en lugar del anterior.

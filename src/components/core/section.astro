@@ -1,0 +1,46 @@
+---
+import ExperienceIcon from "../../icons/experience.astro";
+import ProjectsIcon from "../../icons/projects.astro";
+import PaperIcon from "../../icons/paper.svg";
+
+interface Props {
+  id: string;
+  title: string;
+}
+
+const ICONS: Record<string, (_props: Record<string, any>) => any> = {
+  experience: ExperienceIcon,
+  projects: ProjectsIcon,
+  papers: PaperIcon,
+};
+
+const { id, title } = Astro.props;
+const Icon = ICONS[id] ?? ICONS.papers;
+---
+
+<section id={id} class="timeline-section">
+  <h2 class="h5">
+    <Icon width="2rem" height="2rem" />
+    {title}
+    <a href="#top">⬆️</a>
+  </h2>
+  <slot />
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-double);
+    padding-block: var(--space-double);
+  }
+
+  h2 {
+    display: flex;
+    align-items: center;
+    gap: var(--space-half);
+  }
+  a {
+    margin-inline-start: auto;
+  }
+</style>

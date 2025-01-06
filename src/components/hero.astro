@@ -1,0 +1,45 @@
+---
+import Badge from "./core/badge.astro";
+import Socials from "./hero.socials.astro";
+import Skills from "./core/skills.astro";
+import Cypress from "../icons/technologies/cypress.astro";
+---
+
+<section class="hero-section">
+  <hgroup>
+    <h1>Hola, soy Alejandro</h1>
+    <Badge>Disponible como formador</Badge>
+  </hgroup>
+  <p>
+    +15 años de experiencia. <strong>Desarrollador</strong> y
+    <strong>formador sobre programación</strong> de Madrid, España. Especializado
+    en desarrollo web frontend y backend.
+  </p>
+  <!-- 
+    class="mt-6 text-xl text-gray-800 
+    dark:[&>strong]:text-yellow-200 
+    [&>strong]:text-yellow-500 
+    [&>strong]:font-semibold 
+    dark:text-gray-300" -->
+  <Socials />
+  <Skills />
+</section>
+
+<style>
+  section {
+    padding-block: var(--space-double);
+  }
+  hgroup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    h1 {
+      font-size: 2.2rem;
+      flex: 2 0 60%;
+    }
+    div {
+      flex: 1 1 20%;
+    }
+  }
+</style>

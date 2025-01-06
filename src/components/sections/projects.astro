@@ -1,0 +1,22 @@
+---
+import { getAllProjects } from "../../services/projects.repo";
+import Section from "../core/section.astro";
+import ProjectCard from "./project.card.astro";
+
+const projects = await getAllProjects();
+projects[0].highlights[0] = "active";
+---
+
+<Section id="projects" title="Últimos Proyectos">
+  <div class="projects-wrapper">
+    {projects.map((project) => <ProjectCard {...project} />)}
+  </div>
+</Section>
+
+<style>
+  div.projects-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--space-double);
+  }
+</style>
