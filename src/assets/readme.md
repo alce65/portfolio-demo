@@ -1,0 +1,3 @@
+# Assets
+
+Imágenes del proyecto

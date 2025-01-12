@@ -186,7 +186,7 @@
     },
     "summary": "Desarrollo front-end y back-end en tan solo unas pocas semanas. Aprenderás a desarrollar aplicaciones web con las tecnologías más demandadas en el mercado laboral. Conocerás las bases de la programación, la arquitectura cliente-servidor, el desarrollo de aplicaciones web y la gestión de bases de datos. Además, aprenderás a trabajar en equipo y a gestionar proyectos de desarrollo de software.",
     "company": "ISDI Coders",
-    "image": "https://placehold.co/600x400/999/111",
+    "image": "../assets/projects/bootcamp.mad-24-01.png",
     "urls": ["https://github.com/alce65/week9.final-24-1"],
     "technologies": [
       "HTML",
@@ -231,7 +231,7 @@
     },
     "summary": "Angular. Inicio del proyecto, ESLint. Componentes. Rutas Lazy. Binding y Estados. Arquitectura básica. Servicios. Patrón repository. Formularios Template driven. Observables. HTTPClient. Autenticación. Flux: gestión de estados centralizados. Introducción al Backend. Node. Express",
     "company": "ISDI (DigiTech)",
-    "image": "https://placehold.co/600x400/999/111",
+    "image": "../assets/projects/ng17-node.png",
     "urls": [
       "https://github.com/alce65/demo-dt-angular",
       "https://github.com/alce65/demo-node-dt"
@@ -260,7 +260,7 @@
     },
     "summary": "Talleres complementarios para alumnos de los Bootcapms. [1] Introducción a Bases de datos (D8). DB Relacionales (SQL) v. NoSQL. Entidades y relaciones. Normalización. MySQL. Uso desde Node: driver nativo. [2] Auth en el servidor Node/Express con JWT. Auth en el cliente React con JWT.",
     "company": "ISDI Coders",
-    "image": "https://placehold.co/600x400/999/111",
+    "image": "../assets/projects/taller-mysql.png",
     "urls": [
       "https://github.com/alce65/sql",
       "https://github.com/alce65/Auth-Taller"
@@ -289,7 +289,7 @@
     },
     "summary": "Taller de Angular 17 para alumnos que han estudiado React en el Bootcamp de Desarrollo de Aplicaciones Web de ISDI Coders. En este taller se estudian los conceptos básicos de Angular y se desarrolla una aplicación de gestión de tareas. Inicio del proyecto, ESLint. Componentes. Rutas Lazy. Binding y Estados. Librerías. Pipes. Testing. Arquitectura básica. Servicios. Patrón repository. Observables. HTTPClient. Flux: gestión de estados centralizados. Interceptores. Formularios reactivos. Signals",
     "company": "ISDI Coders",
-    "image": "https://placehold.co/600x400/999/111",
+    "image": "../assets/projects/ng17-isdi.png",
     "urls": ["https://github.com/alce65/ng17.taller-in-situ"],
     "technologies": [
       "JavaScript",
