@@ -1062,8 +1062,9 @@ dialog {
 #### Media Queries
 
 - Notación tradicional: `@media (max-width: 600px) {...}`
-- Notación moderna (con operadores lógicos): `@media (width >= 600px) {...}`
-- 2️⃣0️⃣2️⃣2️⃣🔥🧨☀️ Notación de rango: `@media (400px < width < 1000px)) {...}`
+- 2️⃣0️⃣2️⃣2️⃣🔥🧨☀️ Notación de rango (range syntax), con los operadores de comparación habituales
+  - `@media (width >= 600px) {...}`
+  - `@media (400px < width < 1000px)) {...}`
 
 #### Container queries
 

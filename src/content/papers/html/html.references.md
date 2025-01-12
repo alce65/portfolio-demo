@@ -1,5 +1,5 @@
 ---
-title: References HTML
+title: Referencias de HTML
 description: Referencia de HTML. Fundamentos del lenguaje. Imágenes en la Web. SEO.
 date: 2021-09-06
 tags: [html, validation, images, seo, references]

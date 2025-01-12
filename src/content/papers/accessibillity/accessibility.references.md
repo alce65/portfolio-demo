@@ -1,5 +1,5 @@
 ---
-title: "Accessibility: Referencias"
+title: "Accesibilidad: Referencias"
 description: Referencias del tema de accesibilidad
 date: 2024-01-09
 tags: [html, css, accessibility]
@@ -7,7 +7,7 @@ serie: { "id": 5, "title": "Accessibility" }
 serieOrder: 2
 ---
 
-# Accesibilidad
+## Accesibilidad
 
 - [WAI-ARIA Overview](https://www.w3.org/WAI/standards-guidelines/aria/) Documento de W3C sobre la iniciativa WAI-ARIA.
 

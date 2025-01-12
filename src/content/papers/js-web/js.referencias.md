@@ -1,5 +1,5 @@
 ---
-title: "References: Browsers"
+title: "Referencias: Browsers"
 description: "Referencias: Funcionamiento de los navegadores web. Motores de JavaScript"
 date: 2021-09-01
 tags: [js, web, browser, JS engine]

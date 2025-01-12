@@ -1,5 +1,5 @@
 ---
-title: References CSS
+title: Referencias CSS
 description: Referencias de CSS. Selectores, cascada y herencia. Flexbox. Grid. Custom properties (variables). Novedades.
 date: 2021-09-06
 tags: [css, layout, responsive, references]

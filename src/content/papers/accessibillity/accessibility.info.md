@@ -1,5 +1,5 @@
 ---
-title: Accessibility (A11y)
+title: Accesibilidad (A11y)
 description: "Accesibilidad / UX. Concepto general. Accesibilidad en la web. Tecnologías asistivas. Estándares: WAI del W3C. Niveles de accesibilidad. Pautas WCAG 2. Elementos de accesibilidad: HTML - CSS. WAI - ARIA. Roles y propiedades. Tools"
 date: 2024-01-09
 tags: [html, css, accessibility]
@@ -12,6 +12,7 @@ serieOrder: 1
 - [Accesibilidad Web](#accesibilidad-web)
   - [Beneficios](#beneficios)
   - [Tecnologías asistivas o inclusivas](#tecnologías-asistivas-o-inclusivas)
+  - [Árbol de accesibilidad](#árbol-de-accesibilidad)
 - [Estándares de accesibilidad Web: WAI](#estándares-de-accesibilidad-web-wai)
   - [Actividades dentro de la WAI](#actividades-dentro-de-la-wai)
   - [Niveles de accesibilidad](#niveles-de-accesibilidad)
@@ -89,6 +90,12 @@ Componentes tecnológicos (hardware / software) especialmente creados para propo
   - lectores de texto a voz para redes sociales (social media text-to-speech): iSpeech, NaturalReader Text to Speech, ReadSpeaker,
 - teclados o dispositivos de entrada alternativos (alternative keyboards), como lo teclados en braille
 - scanning software (software de escaneo) como Dasher
+
+### Árbol de accesibilidad
+
+<https://blogs.intuit.com/2021/01/12/why-the-accessibility-tree-is-key-to-understanding-accessible-applications/>
+
+![Representación del árbol de accesibilidad](./assets/accessibility.tree.png)
 
 ## Estándares de accesibilidad Web: WAI
 
