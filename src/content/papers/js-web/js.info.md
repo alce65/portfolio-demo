@@ -505,10 +505,7 @@ values["checkControl"] =
 
 ## Asincronía en JS
 
-- Conceptos
-- Callbacks. Timeouts
-- Promesas
-- Async / await
+Ver [Asincronía en JS](../js-lang/05jsasincrono)
 
 ### Gestión de errores
 
@@ -522,7 +519,3 @@ values["checkControl"] =
 - Ejemplo: <https://pokeapi.co/api/v2/pokemon/ditto>
 - AJAX. xmlHttpRequest (XHR)
 - fetch (Browser, Node)
-
-```
-
-```
