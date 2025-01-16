@@ -46,11 +46,11 @@ const formatDate = (date: Date) => {
 
   p.timeline-date {
     margin: 0;
-    padding-inline-end: 2rem;
+    padding-block: .5rem;
+    padding-inline: 1rem;
   }
 
   .timeline-component {
-    margin: 0 1rem 1rem 1rem;
     background: #1f1f1f;
     /* -webkit-box-shadow:
       5px 5px 10px #1a1a1a,
@@ -73,10 +73,17 @@ const formatDate = (date: Date) => {
     margin-bottom: 2rem;
   }
 
-  @media screen and (width > 500px) {
+  @media screen and (width > 400px) {
+
+    .timeline-component {
+      margin: 0 1rem 1rem 1rem;
+    }
+
     .timeline-date {
       justify-self: self-end;
       align-self: self-start;
+      padding: 0rem;
+      padding-inline-end: 2rem;
     }
 
     .timeline-middle {

@@ -14,9 +14,11 @@ projects[0].highlights[0] = "active";
 </Section>
 
 <style>
-  div.projects-wrapper {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: var(--space-double);
+  @media (width > 400px) {
+    div.projects-wrapper {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: var(--space-double);
+    }
   }
 </style>

@@ -33,6 +33,9 @@ const metadata = {
 
   <style is:global>
     :root {
+      --min-width: 320px;
+      --min-height: 100vh;
+
       /* typography */
       --font-family: "Onest Variable", Verdana, Geneva, Tahoma, sans-serif;
       --base-size: 1rem;
@@ -91,8 +94,8 @@ const metadata = {
     }
 
     body {
-      min-height: 100vh;
-      min-width: 420px;
+      min-block-size: var(--min-height);
+      min-inline-size: var(--min-width);
       background-color: var(--color-bg-primary);
       color: var(--color-primary);
       position: relative;
